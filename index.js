@@ -20,3 +20,8 @@ nums.forEach(num => numStack.push(num));
 console.log('Stack size:', numStack.size());
 console.log('Stack peek:', numStack.peek());
 console.log('Stack min:', numStack.findMin());
+numStack.sort();
+console.log('Stack sorted:');
+while (!numStack.isEmpty()) {
+    console.log(numStack.pop());
+  }
