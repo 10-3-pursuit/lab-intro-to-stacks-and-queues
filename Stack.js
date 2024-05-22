@@ -18,6 +18,16 @@ class Stack {
     return poppedNode.data;
   }
 
+  peek() {
+    if (this.isEmpty()) return null;
+    return this.top.data;
+  }
+
+  isEmpty() {
+    return this.top === null;
+  }
+  
+
 }
 
 module.exports = Stack;
