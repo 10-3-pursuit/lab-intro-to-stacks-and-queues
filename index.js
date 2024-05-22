@@ -18,3 +18,5 @@ const panagram = [
 const numStack = new Stack();
 nums.forEach(num => numStack.push(num));
 console.log('Stack size:', numStack.size());
+console.log('Stack peek:', numStack.peek());
+console.log('Stack min:', numStack.findMin());
