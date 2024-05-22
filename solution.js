@@ -54,15 +54,24 @@ class Stack {
     }
     return this.top
   }
-  // sort(){
-  //   const dataArray = []
-  //   let currentItem = this.top
-  //   for(let i = 1; i <= this.count; i++){
-  //     dataArray.push(currentItem.data)
-  //     currentItem = currentItem.next
-  //   }
-  //   dataArray.sort((a, b) => a - b)
-  // }
+  sort(){
+    const dataArray = []
+    let currentItem = this.top
+    for(let i = 1; i <= this.count; i++){
+      dataArray.push(currentItem.data)
+      currentItem = currentItem.next
+    }
+    let sortedDataArray;
+    if(dataArray.every((item) => typeof item === "number")){
+      sortedDataArray = dataArray.sort((a, b) => a.data - b.data)
+    } else {
+      sortedDataArray = dataArray.sort((a, b) => a.localeCompare(b))
+    }
+    this.top = null
+    for(let item of sortedDataArray.reverse()){
+      this.push(item)
+    }
+  }
 }
 
 class Queue {
