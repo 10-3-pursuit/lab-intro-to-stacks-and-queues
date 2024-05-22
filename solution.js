@@ -63,12 +63,12 @@ class Stack {
     }
     let sortedDataArray;
     if(dataArray.every((item) => typeof item === "number")){
-      sortedDataArray = dataArray.sort((a, b) => a.data - b.data)
+      sortedDataArray = dataArray.sort((a, b) => b.data - a.data)
     } else {
-      sortedDataArray = dataArray.sort((a, b) => a.localeCompare(b))
+      sortedDataArray = dataArray.sort((a, b) => b.localeCompare(a))
     }
     this.top = null
-    for(let item of sortedDataArray.reverse()){
+    for(let item of sortedDataArray){
       this.push(item)
     }
   }
