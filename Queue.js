@@ -43,6 +43,22 @@ class Queue {
       count() {
         return this.size;
       }
+
+      findMax() {
+        if (this.isEmpty()) return null;
+        let max = this.first.data;
+        let current = this.first.next;
+        while (current) {
+          if (current.data > max) max = current.data;
+          current = current.next;
+        }
+        return max;
+      }
+    
+      getLast() {
+        if (this.isEmpty()) return null;
+        return this.last.data;
+      }
 }  
 
 

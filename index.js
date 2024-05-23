@@ -29,5 +29,11 @@ while (!numStack.isEmpty()) {
   const wordQueue = new Queue();
   panagram.forEach(word => wordQueue.enqueue(word));
 
-console.log('Queue count:', wordQueue.count());
-   
+// console.log('Queue count:', wordQueue.count());
+// console.log('Queue peek:', wordQueue.peek());
+// console.log('Queue max:', wordQueue.findMax());
+console.log('Queue last:', wordQueue.getLast());
+console.log('Queue dequeue:');
+while (!wordQueue.isEmpty()) {
+    console.log(wordQueue.dequeue());
+  }
