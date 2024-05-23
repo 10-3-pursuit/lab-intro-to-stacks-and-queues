@@ -25,3 +25,9 @@ console.log('Stack sorted:');
 while (!numStack.isEmpty()) {
     console.log(numStack.pop());
   }
+
+  const wordQueue = new Queue();
+  panagram.forEach(word => wordQueue.enqueue(word));
+
+console.log('Queue count:', wordQueue.count());
+   
