@@ -40,6 +40,9 @@ class Queue {
         return this.first === null;
       }
     
+      count() {
+        return this.size;
+      }
 }  
 
 
