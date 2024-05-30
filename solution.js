@@ -7,6 +7,13 @@ class Node {
     this.next = null;
   }
 }
+
+class Stack {
+  constructor(top = null) {
+    this.top = top;
+  }
+}
+
 module.exports = {
   Node,
   Queue,
