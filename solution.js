@@ -90,6 +90,15 @@ class Queue {
     this.size--;
     return item.data;
   }
+  findMax() {
+    let max = this.first.data;
+    let item = this.first;
+    while (item.next) {
+      item = item.next;
+      max = max > item.data ? max : item.data;
+    }
+    return max;
+  }
 
 }
 
