@@ -38,10 +38,19 @@ class Stack {
     return this.top === null;
   }
   findMin() {
-    return this.top.data;
+    let min = this.top.data;
+    let item = this.top;
+    while (item.next) {
+      item = item.next;
+      min = Math.min(min, item.data)
+    }
+    return min;
   }
   peek() {
     return this.top;
+  }
+  sort() {
+
   }
 }
 
