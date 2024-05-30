@@ -26,6 +26,14 @@ class Stack {
     }
     return count;
   }
+  pop() {
+    let item = this.top;
+    if (item) {
+      let newItem = item.next;
+      this.top = newItem;
+      return item;
+    }
+  }
 }
 
 module.exports = {
