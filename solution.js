@@ -78,6 +78,19 @@ class Queue {
     }
     return ++this.size;
   }
+  dequeue() {
+    if (this.first == null) {
+      throw new Error("The queue is empty");
+    }
+    const item = this.first;
+    if (this.first === this.last) {
+      this.last = null;
+    }
+    this.first = this.first.next;
+    this.size--;
+    return item.data;
+  }
+
 }
 
 module.exports = {
