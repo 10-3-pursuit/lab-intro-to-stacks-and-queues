@@ -17,10 +17,19 @@ class Stack {
     newItem.next = this.top;
     this.top = newItem;
   }
+  size() {
+    let count = 0;
+    let current = this.top;
+    while (current.next) {
+      count++;
+      current = current.next;
+    }
+    return count;
+  }
 }
 
 module.exports = {
   Node,
-  Queue,
+  // Queue,
   Stack,
 };
