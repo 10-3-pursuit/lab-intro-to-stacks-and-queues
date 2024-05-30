@@ -58,6 +58,15 @@ class Queue {
     this.size = 0;
     this.max = null;
   }
+  count() {
+    let count = 1;
+    let item = this.first;
+    while (item.next) {
+      item = item.next;
+      count++;
+    }
+    return count;
+  }
   enqueue(data) {
     let newItem = new Node(data);
     if (!this.first) {
