@@ -40,6 +40,9 @@ class Stack {
   findMin() {
     return this.top.data;
   }
+  peek() {
+    return this.top;
+  }
 }
 
 module.exports = {
