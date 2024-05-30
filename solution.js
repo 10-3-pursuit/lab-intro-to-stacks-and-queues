@@ -99,6 +99,13 @@ class Queue {
     }
     return max;
   }
+  getLast() {
+    let item = this.first;
+    while (item.next) {
+      item = item.next;
+    }
+    return item;
+  }
 
 }
 
