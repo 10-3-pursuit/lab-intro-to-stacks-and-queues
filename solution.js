@@ -109,6 +109,9 @@ class Queue {
   isEmpty() {
     return this.first === null;
   }
+  peek() {
+    return this.first;
+  }
 
 }
 
