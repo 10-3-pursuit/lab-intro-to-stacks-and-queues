@@ -37,6 +37,9 @@ class Stack {
   isEmpty() {
     return this.top === null;
   }
+  findMin() {
+    return this.top.data;
+  }
 }
 
 module.exports = {
