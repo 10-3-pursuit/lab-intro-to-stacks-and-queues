@@ -42,15 +42,12 @@ class Stack {
     let item = this.top;
     while (item.next) {
       item = item.next;
-      min = Math.min(min, item.data)
+      min = min < item.data ? min : item.data;
     }
     return min;
   }
   peek() {
     return this.top;
-  }
-  sort() {
-
   }
 }
 
