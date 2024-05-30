@@ -51,8 +51,16 @@ class Stack {
   }
 }
 
+class Queue {
+  constructor() {
+    this.first = first;
+    this.last = null;
+    this.size = 0;
+  }
+}
+
 module.exports = {
   Node,
-  // Queue,
+  Queue,
   Stack,
 };
