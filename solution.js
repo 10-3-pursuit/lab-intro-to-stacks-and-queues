@@ -106,6 +106,9 @@ class Queue {
     }
     return item;
   }
+  isEmpty() {
+    return this.first === null;
+  }
 
 }
 
