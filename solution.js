@@ -18,7 +18,7 @@ class Stack {
     this.top = newItem;
   }
   size() {
-    let count = 0;
+    let count = 1;
     let current = this.top;
     while (current.next) {
       count++;
@@ -33,6 +33,9 @@ class Stack {
       this.top = newItem;
       return item;
     }
+  }
+  isEmpty() {
+    return this.top === null;
   }
 }
 
